@@ -12,8 +12,8 @@ CREATE TABLE IF NOT EXISTS users
 user_id int UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 first_name VARCHAR(20) NOT NULL,
 last_name VARCHAR(40) NOT NULL,
-email VARCHAR(60) NOT NULL UNIQUE,
-pass CHAR(40) NOT NULL,
+username VARCHAR(60) NOT NULL UNIQUE,
+password CHAR(40) NOT NULL,
 reg_date DATETIME
 
 
@@ -23,7 +23,6 @@ CREATE TABLE IF NOT EXISTS stuff
 (
 id int   AUTO_INCREMENT PRIMARY KEY,
 
-stuff_id TEXT NOT NULL, 
 locations_id INT NOT NULL,
 description TEXT,
 create_date DATETIME NOT NULL,
@@ -34,17 +33,17 @@ finder TEXT,
 status SET ("Found", "Lost", "Claimed") NOT NULL
 );
 
-INSERT INTO stuff (stuff_id, locations_id, description ,create_date, update_date, room, owner, status)
+INSERT INTO stuff (locations_id, description ,create_date, update_date, room, owner, status)
 VALUES 
-("Water Bottle", 23, "Red Marist water bottle",'2016-05-01 05:42:34','2016-11-01 10:30:00', "Byrne House","Jessica Simmons", "Lost" ),
-("gloves", 24, "Green wool gloves", '2016-09-12 15:21:00','2016-11-05 12:30:00', "Byrne House","Kevin Heart" , "Lost"),
-("coat", 32, "White fur coat",  '2016-01-29 17:01:18','2016-10-31 01:30:00', "Fontaine","Nicki Minaj" , "Lost");
+(23, "Red Marist water bottle",'2016-05-01 05:42:34','2016-11-01 10:30:00', "Byrne House","Jessica Simmons", "Lost" ),
+(24, "Green wool gloves", '2016-09-12 15:21:00','2016-11-05 12:30:00', "Byrne House","Kevin Heart" , "Lost"),
+(32, "White fur coat",  '2016-01-29 17:01:18','2016-10-31 01:30:00', "Fontaine","Nicki Minaj" , "Lost");
 
-INSERT INTO stuff (stuff_id, locations_id, description ,create_date, update_date, room, owner, finder, status)
+INSERT INTO stuff (locations_id, description ,create_date, update_date, room, owner, finder, status)
 VALUES
-("calculator", 01, "Silver TI-84 Calculator",  '2016-01-07 18:11:18','2016-10-31 01:18:00', "Marian Hall","Amy Val" , "Yasmine Peru","Found"),
-("Id Card", 13, "ID Card",  '2016-03-13 19:21:18','2016-11-10 12:20:00', "Dyson Center","Connor Johnson" , "Bob Dylan","Found"),
-("Ring", 7, "Blue Ring",  '2016-02-21 13:31:18','2016-08-31 09:36:00', "Hancock Center","Liz Morey" , "Chucky Paw","Found");
+(01, "Silver TI-84 Calculator",  '2016-01-07 18:11:18','2016-10-31 01:18:00', "Marian Hall","Amy Val" , "Yasmine Peru","Found"),
+(13, "ID Card",  '2016-03-13 19:21:18','2016-11-10 12:20:00', "Dyson Center","Connor Johnson" , "Bob Dylan","Found"),
+(7, "Blue Ring",  '2016-02-21 13:31:18','2016-08-31 09:36:00', "Hancock Center","Liz Morey" , "Chucky Paw","Found");
 
 
 
@@ -57,8 +56,8 @@ update_date DATETIME NOT NULL
 );
 
 
-INSERT INTO users (first_name, last_name, pass, email, reg_date)
-VALUES ("Admin", "Admin", "gaze11e", "faithmatt97@gmail.com", Now());
+INSERT INTO users (first_name, last_name, username, password, reg_date)
+VALUES ("Faith", "Matthew", "admin", "root", Now());
 
 INSERT INTO locations(name, create_date, update_date)
 VALUES 

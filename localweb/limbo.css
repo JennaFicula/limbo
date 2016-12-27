@@ -1,0 +1,181 @@
+body{
+background-color:#E4DFDA;
+
+font-family: Open Sans Condensed;
+
+
+}
+ 
+h1 {
+	color: black;
+}
+
+.id{
+	text-decoration:underline;
+}
+ 
+table{
+	background: #C1666B;
+    padding: 20px; 
+    width: 375px;
+    height: 100px; 
+	border-color: #C1666B;
+    border-radius:25px;
+	color: white;
+    border-spacing:5;
+} 
+
+.indexlinks
+
+{ 
+	border: 1px solid white;
+	border-radius: 25px;
+	width: 300px;
+	background-color:#4281A4;
+	display: inline-block;
+	margin-left: 20px;
+	
+}
+
+a:link, a:visited{
+	color: white;
+	text-decoration:none;
+	
+}
+a:hover { 
+	
+	text-color: white;
+}
+
+.indexicons{
+	width:200px;
+	height:200px;
+
+	
+} 
+
+input{
+	float: right; 
+	
+	
+}
+form {
+	line-height: 2em;
+}
+@font-face {
+  font-family: 'Open Sans Condensed';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans CondLight'), local('OpenSansCondensedLight'), url(http://themes.googleusercontent.com/static/fonts/opensanscondensed/v7/gk5FxslNkTTHtojXrkp-xF1YPouZEKgzpqZW9wN-3Ek.woff) format('woff');
+}
+/*basic stuff incoming*/
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+
+#container {
+  width: 330px;
+  margin: 25px auto;
+}
+/*for lack a better headline*/
+
+h1 {
+  color: #333;
+  font-family: Open Sans Condensed;
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h1:hover {
+  font-size: 2.5em;
+}
+
+h1:hover:before,
+h1:hover:after {
+  font-style: italic;
+  font-size: 0.5em;
+}
+
+
+/*i'm a button, click me!*/
+
+button {
+  width: 100px;
+  height: 100px;
+  color: #E4DFDA;
+  background-color: #3498db;
+  font-family: Open Sans Condensed;
+  text-decoration: none;
+  font-size: 1.8em;
+  border: 2px #ffffff solid;
+  margin: 10px 0 0 5px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+/*magic starts here*/
+
+button:hover {
+  cursor: pointer;
+}
+
+.highlight:hover {
+  background-color: #FFffff;
+  color: #3498db;
+}
+
+.fade:hover {
+  border: 0px;
+  color: #009999;
+  opacity: 0;
+}
+
+.boom:hover {
+  color: #009999;
+  border: #009999;
+  opacity: 0;
+  -webkit-transform: scale(2, 2);
+  -moz-transform: scale(2, 2);
+  transform: scale(2, 2);
+}
+
+button:hover {
+  border-width: 20px;
+}
+
+w(45deg, 45deg);
+}
+/*for the sake of responsiveness...*/
+
+@media (max-width: 330px) {
+  #container {
+    width: 100%;
+  }
+  button {
+    width: 90%;
+    margin: 5% 0 0 5%;
+  }
+}
+ 
+button {
+  width: 150px;
+  height: 75px;
+  color: #ffffff;
+  background-color:#4281A4; 
+  font-family: Open Sans Condensed;
+  text-decoration: none;
+  font-size: 1.0em;
+  border: 2px #E4DFDA solid;
+  margin: 10px 0 0 5px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
